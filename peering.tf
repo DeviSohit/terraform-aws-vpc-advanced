@@ -10,7 +10,7 @@ resource "aws_vpc_peering_connection" "peering" {
 
   tags = merge (
     {
-      Name = "VPC Peering between Default and ${var.project_name}"
+      Name = "VPC Peering between Default and ${var.project_name}-${var.env}"
     },
     var.common_tags
   )
